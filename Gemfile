@@ -79,3 +79,13 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'devise'
+
+gem 'active_model_serializers'
+
+gem 'devise-jwt'
+
+gem 'rswag'
+gem 'rswag-api'
+gem 'rswag-ui'
