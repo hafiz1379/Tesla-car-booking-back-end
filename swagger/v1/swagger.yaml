@@ -1,0 +1,121 @@
+openapi: 3.0.3
+info:
+  title: Rails App API
+  version: v1
+paths:
+  /api-docs:
+    get:
+      summary: Swagger UI
+      tags:
+        - Swagger
+      responses:
+        '200':
+          description: Success - Swagger UI
+
+  /api/v1/users/{user_id}/cars:
+    get:
+      summary: List Cars for a User
+      tags:
+        - Users
+        - Cars
+      parameters:
+        - name: user_id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Success - Cars listed
+        '401':
+          description: Unauthorized
+
+    post:
+      summary: Create a Car for a User
+      tags:
+        - Users
+        - Cars
+      parameters:
+        - name: user_id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '201':
+          description: Success - Car created
+        '422':
+          description: Unprocessable Entity
+        '401':
+          description: Unauthorized
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                make:
+                  type: string
+                model:
+                  type: string
+              required:
+                - make
+                - model
+
+  /api/v1/users/{user_id}/reservations:
+    get:
+      summary: List Reservations for a User
+      tags:
+        - Users
+        - Reservations
+      parameters:
+        - name: user_id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Success - Reservations listed
+        '401':
+          description: Unauthorized
+
+    post:
+      summary: Create a Reservation for a User
+      tags:
+        - Users
+        - Reservations
+      parameters:
+        - name: user_id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '201':
+          description: Success - Reservation created
+        '422':
+          description: Unprocessable Entity
+        '401':
+          description: Unauthorized
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                start_date:
+                  type: string
+                  format: date
+                end_date:
+                  type: string
+                  format: date
+              required:
+                - start_date
+                - end_date
+servers:
+  - url: https://127.0.0.1:3000/
