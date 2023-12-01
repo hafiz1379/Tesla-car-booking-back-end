@@ -183,6 +183,8 @@ GEM
     nio4r (2.6.1)
     nokogiri (1.15.5-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.15.5-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -342,6 +344,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-darwin-17
   x86_64-linux
 
 DEPENDENCIES
@@ -374,7 +377,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 3.0.6p216
 
 BUNDLED WITH
-   2.4.22
+   2.4.21
