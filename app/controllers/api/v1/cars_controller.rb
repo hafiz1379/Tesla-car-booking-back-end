@@ -18,7 +18,7 @@ class Api::V1::CarsController < ApplicationController
     if @car.save
       render json: @car, status: :created
     else
-      render json: { error: 'Car data is not recorded!!' }, status: :unprocessable_entity
+      render json: { error: 'Car data could not be created!!' }, status: :unprocessable_entity
     end
   end
 
@@ -42,6 +42,7 @@ class Api::V1::CarsController < ApplicationController
   private
 
   def car_params
-    params.require(:car).permit(:name, :image, :model, :finance_fee, :total_amount, :discription, :duration)
+    params.require(:car).permit(:name, :image, :color, :year, :finance_fee, :total_amount_payable,
+                                :description, :duration, :option_to_purchase)
   end
 end
