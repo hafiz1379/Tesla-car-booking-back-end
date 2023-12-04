@@ -14,6 +14,8 @@ User.create([
 ])
 
 Car.create([
-    {name: "Car 1", model: "Model 1", color: "Black", year: 2021, finance_fee: 1000, option_to_purchase: 2000, total_amount_payable: 3000, image: "https://www.audi.com/content/dam/gbp2/experience-audi/models-and-technology/production-models/a4/my2021/1920x1080-gal-prop-tx/1920x1080_desktop_A4_191001.jpg", duration: 12},
-    {name: "Car 2", model: "Model 2", color: "White", year: 2022, finance_fee: 1500, option_to_purchase: 2500, total_amount_payable: 3500, image: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/overview/3-series-sedan/2019/design/BMW-3-Series-Sedan-Design-Teaser-Desktop.jpg", duration: 10},
+    {name: "Tesla Roadster", color: "Red", description: "The Tesla Roadster is a battery electric four-seater sports car. It is capable of accelerating from 0 to 60 mph in 1.9 seconds.",
+    year: 2021, finance_fee: 1000, option_to_purchase: 200000, total_amount_payable: 300000, image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1701521015/devSources/car1_xwz5qo.png", duration: 12},
+    {name: "Model S", color: "Blue", description: "Model S is built from the ground up as an electric vehicle, with a high-strength architecture and floor-mounted battery pack for incredible occupant protection and low rollover risk.",
+    year: 2022, finance_fee: 500, option_to_purchase: 100000, total_amount_payable: 150000, image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1701521022/devSources/car2_fsngei.png", duration: 10},
 ])
