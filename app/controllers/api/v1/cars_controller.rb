@@ -33,11 +33,6 @@ class Api::V1::CarsController < ApplicationController
   def destroy
     @car = Car.find(params[:id])
     @car.update(is_removed: true)
-
-    respond_to do |format|
-      format.html { redirect_to api_v1_user_cars_path }
-      format.json { head :no_content }
-    end
   end
 
   private
