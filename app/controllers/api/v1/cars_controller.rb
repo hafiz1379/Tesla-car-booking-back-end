@@ -32,10 +32,11 @@ class Api::V1::CarsController < ApplicationController
 
   def destroy
     @car = Car.find(params[:id])
-    if @car.destroy
-      render json: @car
-    else
-      render json: { errors: @car.errors.full_messages }, status: :unprocessable_entity
+    @car.update(is_removed: true)
+
+    respond_to do |format|
+      format.html { redirect_to api_v1_user_cars_path }
+      format.json { head :no_content }
     end
   end
 
@@ -43,6 +44,6 @@ class Api::V1::CarsController < ApplicationController
 
   def car_params
     params.require(:car).permit(:name, :image, :color, :year, :finance_fee, :total_amount_payable,
-                                :description, :duration, :option_to_purchase)
+                                :description, :duration, :option_to_purchase, :is_removed)
   end
 end
