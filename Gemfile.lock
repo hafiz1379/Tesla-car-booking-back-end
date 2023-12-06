@@ -93,7 +93,6 @@ GEM
     bullet (7.1.4)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
-    cancancan (3.5.0)
     capybara (3.39.2)
       addressable
       matrix
@@ -352,7 +351,6 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
   bullet
-  cancancan
   capybara
   debug
   devise
@@ -377,7 +375,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.6p216
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.21
