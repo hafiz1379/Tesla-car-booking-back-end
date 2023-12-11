@@ -21,6 +21,8 @@ properties:
     type: integer
   description:
     type: string
+  is_removed:
+    type: boolean
   created_at:
     type: string
   updated_at:
