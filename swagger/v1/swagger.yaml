@@ -108,8 +108,8 @@ paths:
                 $ref: 'schemas/Car.yaml'
         '401':
           description: Unauthorized
-        '500':
-          description: Internal server error 
+        '422':
+          description: Unprocessable Entity 
 
   /api/v1/users/{user_id}/reservations:
     get:
