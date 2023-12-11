@@ -4,7 +4,7 @@ class Api::V1::ReservationsController < ApplicationController
   # GET /reservations
   def index
     user = User.find(params[:user_id])
-    @reservations = user.reservations.includes(:car)
+    @reservations = user.reservations.includes(:car).where(cars: { is_removed: false })
 
     render json: @reservations, include: :car
   end
