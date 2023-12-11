@@ -16,6 +16,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [📑 Database ERD](#erd)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -60,6 +61,9 @@ The link to the React app:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 📑 Database ERD <a name="erd"></a>
+
+<img src='app/assets/images/table-tesla-car-booking.png' />
 
 <!-- GETTING STARTED -->
 
