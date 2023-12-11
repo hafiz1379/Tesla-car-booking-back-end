@@ -1,22 +1,77 @@
 openapi: 3.0.3
 info:
-  title: Rails App API
+  title: Tesla Car Booking API
   version: v1
 paths:
-  /api-docs:
+  /api/v1/users:
     get:
-      summary: Swagger UI
+      summary: List All the Users
       tags:
-        - Swagger
+        - Users
       responses:
         '200':
-          description: Success - Swagger UI
+          description: Success - Users listed
+          content:
+            application/json:
+              schema:             
+                $ref: 'schemas/User.yaml'
+        '401':
+          description: Unauthorized
+    post:
+      summary: Create a User
+      tags:
+        - Users
+      responses:
+        '201':
+          description: Success - User created
+        '422':
+          description: Unprocessable Entity
+        '401':
+          description: Unauthorized
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+                - name
+                - email
+                - password
+  /api/v1/users/{user_id}:
+    get:
+      summary: Get a User
+      tags:
+        - Users
+      parameters:
+        - name: user_id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Success - User listed
+          content:
+            application/json:
+              schema:             
+                $ref: 'schemas/User.yaml'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
 
   /api/v1/users/{user_id}/cars:
     get:
-      summary: List Cars for a User
+      summary: List All the Cars
       tags:
-        - Users
         - Cars
       parameters:
         - name: user_id
@@ -28,13 +83,16 @@ paths:
       responses:
         '200':
           description: Success - Cars listed
+          content:
+            application/json:
+              schema:             
+                $ref: 'schemas/Car.yaml'
         '401':
           description: Unauthorized
 
     post:
-      summary: Create a Car for a User
+      summary: Create a Car
       tags:
-        - Users
         - Cars
       parameters:
         - name: user_id
@@ -56,19 +114,72 @@ paths:
             schema:
               type: object
               properties:
-                make:
+                name:
                   type: string
-                model:
+                image:
                   type: string
+                color:
+                  type: string
+                year:
+                  type: integer
+                finance_fee:
+                  type: number
+                total_amount_payable:
+                  type: number
+                description:
+                  type: string
+                duration:
+                  type: integer
+                option_to_purchase:
+                  type: number
+                is_removed:
+                  type: boolean
               required:
-                - make
-                - model
+                - name
+                - image
+                - color
+                - year
+                - finance_fee
+                - total_amount_payable
+                - description
+                - duration
+                - option_to_purchase
+  /api/v1/users/{user_id}/cars/{car_id}:
+    delete:
+      tags:
+        - Cars
+      summary: Delete a car
+      description: Delete a car
+      operationId: deleteCar
+      parameters:
+        - name: user_id
+          in: path
+          description: User id
+          required: true
+          schema:
+            type: integer
+        - name: car_id
+          in: path
+          description: Car id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Car deleted
+          content:
+            application/json:
+              schema:
+                $ref: 'schemas/Car.yaml'
+        '401':
+          description: Unauthorized
+        '422':
+          description: Unprocessable Entity 
 
   /api/v1/users/{user_id}/reservations:
     get:
-      summary: List Reservations for a User
+      summary: List All the Reservations for a User
       tags:
-        - Users
         - Reservations
       parameters:
         - name: user_id
@@ -80,13 +191,16 @@ paths:
       responses:
         '200':
           description: Success - Reservations listed
+          content:
+            application/json:
+              schema:             
+                $ref: 'schemas/Reservation.yaml'
         '401':
           description: Unauthorized
 
     post:
       summary: Create a Reservation for a User
       tags:
-        - Users
         - Reservations
       parameters:
         - name: user_id
@@ -108,14 +222,19 @@ paths:
             schema:
               type: object
               properties:
-                start_date:
+                city:
+                  type: string
+                test_date:
                   type: string
                   format: date
-                end_date:
-                  type: string
-                  format: date
+                user_id:
+                  type: integer
+                car_id:
+                  type: integer
               required:
-                - start_date
-                - end_date
+                - city
+                - test_date
+                - user_id
+                - car_id
 servers:
-  - url: https://127.0.0.1:3000/
+  - url: http://127.0.0.1:3000
