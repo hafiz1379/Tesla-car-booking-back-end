@@ -79,6 +79,37 @@ paths:
                 - description
                 - duration
                 - option_to_purchase
+  /api/v1/users/{user_id}/cars/{car_id}:
+    delete:
+      tags:
+        - Cars
+      summary: Delete a car
+      description: Delete a car
+      operationId: deleteCar
+      parameters:
+        - name: user_id
+          in: path
+          description: User id
+          required: true
+          schema:
+            type: integer
+        - name: car_id
+          in: path
+          description: Car id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Car deleted
+          content:
+            application/json:
+              schema:
+                $ref: 'schemas/Car.yaml'
+        '401':
+          description: Unauthorized
+        '500':
+          description: Internal server error 
 
   /api/v1/users/{user_id}/reservations:
     get:
@@ -141,5 +172,4 @@ paths:
                 - user_id
                 - car_id
 servers:
-  - url: https://127.0.0.1:3000
-  
+  - url: http://127.0.0.1:3000
