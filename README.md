@@ -102,7 +102,26 @@ Even though, for general purposes, Install this project with:
 ### Usage
 
 To run the project, do the following:
-- Run `rails s` to open the project in your browser.
+
+1. Open your terminal
+2. Navigate to your folder
+3. Start the server (rails s)
+```sh
+   rails s
+```
+4. Open your browser at your local host
+```sh
+   http://localhost:3000
+```
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  cd project
+  rspec spec
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
