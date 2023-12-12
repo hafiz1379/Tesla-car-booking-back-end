@@ -102,7 +102,37 @@ Even though, for general purposes, Install this project with:
 ### Usage
 
 To run the project, do the following:
-- Run `rails s` to open the project in your browser.
+
+1. Open your terminal
+2. Navigate to your folder
+3. Start the server (rails s)
+```sh
+   rails s
+```
+4. Open your browser at your local host
+```sh
+   http://localhost:3000
+```
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  cd project
+  rspec spec
+```
+
+### Create and set up the database
+
+To run the backend app, run the following commands:
+
+```sh
+  cd project
+  rails db:create
+  rails db:migrate
+  rails db:seed
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
