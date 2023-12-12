@@ -33,6 +33,11 @@ class Api::V1::CarsController < ApplicationController
   def destroy
     @car = Car.find(params[:id])
     @car.update(is_removed: true)
+    if @car.destroy
+      render json: @car
+    else
+      render json: @car.errors, status: :unprocessable_entity
+    end
   end
 
   private

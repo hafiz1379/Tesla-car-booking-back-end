@@ -37,6 +37,11 @@ class Api::V1::ReservationsController < ApplicationController
   def destroy
     @reservation.destroy
     head :no_content
+    if @reservation.destroy
+      render json: @reservation
+    else
+      render json: @reservation.errors, status: :unprocessable_entity
+    end
   end
 
   private
