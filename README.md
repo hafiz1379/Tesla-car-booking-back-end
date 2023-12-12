@@ -123,6 +123,17 @@ To run tests, run the following command:
   rspec spec
 ```
 
+### Create and set up the database
+
+To run the backend app, run the following commands:
+
+```sh
+  cd project
+  rails db:create
+  rails db:migrate
+  rails db:seed
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
