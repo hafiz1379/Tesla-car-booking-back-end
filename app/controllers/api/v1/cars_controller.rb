@@ -18,7 +18,7 @@ class Api::V1::CarsController < ApplicationController
     if @car.save
       render json: @car, status: :created
     else
-      render json: { error: 'Car data could not be created!!' }, status: :unprocessable_entity
+      render json: { error: 'Failed to create car data' }, status: :unprocessable_entity
     end
   end
 
