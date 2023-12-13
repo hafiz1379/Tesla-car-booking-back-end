@@ -24,9 +24,9 @@ class Api::V1::CarsController < ApplicationController
 
   def update
     if @car.update(car_params)
-      render json: @car, status: :updated, location: @car
+      render json: @car, status: :ok
     else
-      render json: @car.errors, status: :unprocessable_entity
+      render json: { errors: @car.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
