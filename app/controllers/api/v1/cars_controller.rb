@@ -5,7 +5,7 @@ class Api::V1::CarsController < ApplicationController
   end
 
   def show
-    @car = Car.find(params[:id])
+    @car = Car.find_by(id: params[:id])
     if @car
       render json: @car, status: :ok
     else
