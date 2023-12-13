@@ -1,7 +1,7 @@
 class Car < ApplicationRecord
   has_many :reservations, dependent: :destroy
 
-  validates :name, presence: true
+  validates :name, presence: true, length: { minimum: 2 }
   validates :description, presence: true
   validates :finance_fee, presence: true, numericality: { greater_than: 0 }
   validates :option_to_purchase, presence: true
