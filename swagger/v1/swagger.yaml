@@ -1,0 +1,240 @@
+openapi: 3.0.3
+info:
+  title: Tesla Car Booking API
+  version: v1
+paths:
+  /api/v1/users:
+    get:
+      summary: List All the Users
+      tags:
+        - Users
+      responses:
+        '200':
+          description: Success - Users listed
+          content:
+            application/json:
+              schema:             
+                $ref: 'schemas/User.yaml'
+        '401':
+          description: Unauthorized
+    post:
+      summary: Create a User
+      tags:
+        - Users
+      responses:
+        '201':
+          description: Success - User created
+        '422':
+          description: Unprocessable Entity
+        '401':
+          description: Unauthorized
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+                - name
+                - email
+                - password
+  /api/v1/users/{user_id}:
+    get:
+      summary: Get a User
+      tags:
+        - Users
+      parameters:
+        - name: user_id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Success - User listed
+          content:
+            application/json:
+              schema:             
+                $ref: 'schemas/User.yaml'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+
+  /api/v1/users/{user_id}/cars:
+    get:
+      summary: List All the Cars
+      tags:
+        - Cars
+      parameters:
+        - name: user_id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Success - Cars listed
+          content:
+            application/json:
+              schema:             
+                $ref: 'schemas/Car.yaml'
+        '401':
+          description: Unauthorized
+
+    post:
+      summary: Create a Car
+      tags:
+        - Cars
+      parameters:
+        - name: user_id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '201':
+          description: Success - Car created
+        '422':
+          description: Unprocessable Entity
+        '401':
+          description: Unauthorized
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                image:
+                  type: string
+                color:
+                  type: string
+                year:
+                  type: integer
+                finance_fee:
+                  type: number
+                total_amount_payable:
+                  type: number
+                description:
+                  type: string
+                duration:
+                  type: integer
+                option_to_purchase:
+                  type: number
+                is_removed:
+                  type: boolean
+              required:
+                - name
+                - image
+                - color
+                - year
+                - finance_fee
+                - total_amount_payable
+                - description
+                - duration
+                - option_to_purchase
+  /api/v1/users/{user_id}/cars/{car_id}:
+    delete:
+      tags:
+        - Cars
+      summary: Delete a car
+      description: Delete a car
+      operationId: deleteCar
+      parameters:
+        - name: user_id
+          in: path
+          description: User id
+          required: true
+          schema:
+            type: integer
+        - name: car_id
+          in: path
+          description: Car id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Car deleted
+          content:
+            application/json:
+              schema:
+                $ref: 'schemas/Car.yaml'
+        '401':
+          description: Unauthorized
+        '422':
+          description: Unprocessable Entity 
+
+  /api/v1/users/{user_id}/reservations:
+    get:
+      summary: List All the Reservations for a User
+      tags:
+        - Reservations
+      parameters:
+        - name: user_id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Success - Reservations listed
+          content:
+            application/json:
+              schema:             
+                $ref: 'schemas/Reservation.yaml'
+        '401':
+          description: Unauthorized
+
+    post:
+      summary: Create a Reservation for a User
+      tags:
+        - Reservations
+      parameters:
+        - name: user_id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '201':
+          description: Success - Reservation created
+        '422':
+          description: Unprocessable Entity
+        '401':
+          description: Unauthorized
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                city:
+                  type: string
+                test_date:
+                  type: string
+                  format: date
+                user_id:
+                  type: integer
+                car_id:
+                  type: integer
+              required:
+                - city
+                - test_date
+                - user_id
+                - car_id
+servers:
+  - url: http://127.0.0.1:3000

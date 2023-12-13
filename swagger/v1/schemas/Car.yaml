@@ -1,0 +1,29 @@
+---
+type: object
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  color:
+    type: string
+  year:
+    type: integer
+  finance_fee:
+    type: number
+  option_to_purchase:
+    type: number
+  total_amount_payable:
+    type: number
+  image:
+    type: string
+  duration:
+    type: integer
+  description:
+    type: string
+  is_removed:
+    type: boolean
+  created_at:
+    type: string
+  updated_at:
+    type: string
