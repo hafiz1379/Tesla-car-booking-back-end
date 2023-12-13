@@ -16,6 +16,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Kanban borad](#kanban-baord)
   - [📑 Database ERD](#erd)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -65,6 +66,17 @@ The link to the React app:
 
 <img src='app/assets/images/table-tesla-car-booking.png' />
 
+<!-- Kanban Board -->
+
+### Kanban board <a name="kanban-baord" >
+
+- Kanban board: (https://github.com/users/ivangonzalez224/projects/9)
+
+- The initial state of Kanban board
+  <img src='app/assets/images/286696384-4dbde003-cfed-492a-8901-dde0d69ec01a.png' />
+
+### The final number of team members (5 members)
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -94,6 +106,7 @@ Clone this repository to your desired folder:
 
 This project does not require installation. Just clone the repository to your local machine.
 Even though, for general purposes, Install this project with:
+
 ```sh
   cd my-folder
   bundle install
@@ -106,10 +119,13 @@ To run the project, do the following:
 1. Open your terminal
 2. Navigate to your folder
 3. Start the server (rails s)
+
 ```sh
    rails s
 ```
+
 4. Open your browser at your local host
+
 ```sh
    http://localhost:3000
 ```
