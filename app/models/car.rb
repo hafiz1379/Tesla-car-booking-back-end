@@ -6,5 +6,5 @@ class Car < ApplicationRecord
   validates :finance_fee, presence: true
   validates :option_to_purchase, presence: true
   validates :total_amount_payable, presence: true
-  validates :duration, presence: true
+  validates :duration, presence: true, numericality: { only_integer: true }
 end
