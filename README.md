@@ -32,9 +32,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Tesla Car Booking Frontend <a name="about-project"></a>
+# 📖 Tesla Car Booking Backend <a name="about-project"></a>
 
-**Tesla Car Booking Frontend** is the back-end app that provides a user api for booking Tesla cars test drives. This app is integrated with the front end React app linked below.
+**Tesla Car Booking Backend** is the back-end app that provides a user api for booking Tesla cars test drives. This app is integrated with the front end React app linked below.
 
 ## 💻 Link to front end React app <a name="link-frontend"></a>
 
@@ -80,7 +80,7 @@ Our project utilizes a Kanban board to visualize and manage tasks throughout the
 - **Review**: Tasks that are completed and awaiting review.
 - **Done**: Tasks that have been completed and implemented.
 
-- [Kanban board link:](https://github.com/users/ivangonzalez224/projects/9)
+- [Kanban board link](https://github.com/users/ivangonzalez224/projects/9)
 
 - Final Team Size: 5 members
 
@@ -95,13 +95,15 @@ Our project utilizes a Kanban board to visualize and manage tasks throughout the
 
 - [Live Demo api link](https://tesla-car-booking-q0hb.onrender.com)
 
+- [Live Demo front end app link](https://tesla-car-booking-front.onrender.com)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-In this project that used RoR to build a Tesla Car booking api.
+In this project we used RoR to build a Tesla Car booking api.
 
 ### Prerequisites
 
