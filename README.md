@@ -153,6 +153,7 @@ Our project utilizes a Kanban board to visualize and manage tasks throughout the
 - [Kanban board link:](https://github.com/users/ivangonzalez224/projects/9)
 
 - [link to the screenshot of the initial state of Kanban board:](https://private-user-images.githubusercontent.com/117098454/286696384-4dbde003-cfed-492a-8901-dde0d69ec01a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDI0ODgwNDUsIm5iZiI6MTcwMjQ4Nzc0NSwicGF0aCI6Ii8xMTcwOTg0NTQvMjg2Njk2Mzg0LTRkYmRlMDAzLWNmZWQtNDkyYS04OTAxLWRkZTBkNjllYzAxYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMjEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTIxM1QxNzE1NDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kZTdhMjg4YTE2ZTNjZWVhZDZlMGJlOGY5NDQ2NDQ5OTdjNGJkODU3NDZhN2M3NGE0MDhhYjE1NTQzMDZjMzkzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.5Ns1JH6ChhIK7HJUPQUmwwG5_l6bTQOSuNfyCdyRnlQ)
+- Final Team Size: 5 members
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
