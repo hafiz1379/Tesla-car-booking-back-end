@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+  
+# Defines the root path route ("/")
+root "users/sessions#new" 
 
   namespace :api do
     namespace :v1 do
