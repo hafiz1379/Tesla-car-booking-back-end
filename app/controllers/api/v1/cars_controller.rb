@@ -5,7 +5,7 @@ class Api::V1::CarsController < ApplicationController
   end
 
   def show
-    @car = Car.find(params[:id])
+    @car = Car.find_by(id: params[:id])
     if @car
       render json: @car, status: :ok
     else
@@ -18,25 +18,24 @@ class Api::V1::CarsController < ApplicationController
     if @car.save
       render json: @car, status: :created
     else
-      render json: { error: 'Car data could not be created!!' }, status: :unprocessable_entity
+      render json: { error: 'Failed to create car data' }, status: :unprocessable_entity
     end
   end
 
   def update
     if @car.update(car_params)
-      render json: @car, status: :updated, location: @car
+      render json: @car, status: :ok
     else
-      render json: @car.errors, status: :unprocessable_entity
+      render json: { errors: @car.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
   def destroy
     @car = Car.find(params[:id])
-    @car.update(is_removed: true)
-    if @car.destroy
+    if @car.update(is_removed: true)
       render json: @car
     else
-      render json: @car.errors, status: :unprocessable_entity
+      render json: { errors: @car.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
