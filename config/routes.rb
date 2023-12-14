@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
+
   devise_for :users, path: 'auth', path_names: {
     sign_in: 'login',
     sign_out: 'logout',
@@ -10,9 +11,17 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
-  
-# Defines the root path route ("/")
-root "users/sessions#new" 
+
+  # Define the root path route ("/")
+  devise_scope :user do
+    authenticated :user do
+      root to: 'dashboard#index', as: :authenticated_root
+    end
+
+    unauthenticated do
+      root to: 'users/sessions#new', as: :unauthenticated_root
+    end
+  end
 
   namespace :api do
     namespace :v1 do
@@ -22,5 +31,6 @@ root "users/sessions#new"
       end
     end
   end
+
   # get "up" => "rails/health#show", as: :rails_health_check
 end
