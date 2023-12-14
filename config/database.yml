@@ -81,7 +81,5 @@ test:
 #
 production:
   <<: *default
-  database: tesla_car_booking_production
-  username: postgres
-  password: 1234
+  url: <%= ENV['DATABASE_URL'] %>
   
