@@ -18,6 +18,7 @@
     - [Key Features](#key-features)
   - [📑 Database ERD](#erd)
     - [Kanban borad](#kanban-baord)
+    - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -85,6 +86,14 @@ Our project utilizes a Kanban board to visualize and manage tasks throughout the
 
 - The initial state of Kanban board
   <img src='app/assets/images/286696384-4dbde003-cfed-492a-8901-dde0d69ec01a.png' />
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+ The link to the project deployed:
+
+- [Live Demo api link](https://tesla-car-booking-q0hb.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
