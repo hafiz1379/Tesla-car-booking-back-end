@@ -84,3 +84,4 @@ production:
   database: tesla_production
   username: tesla
   password: <%= ENV["tesla"] %>
+  url: <%= ENV['DATABASE_URL'] %>
