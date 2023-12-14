@@ -17,6 +17,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [📑 Database ERD](#erd)
+    - [Kanban borad](#kanban-baord)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -65,6 +66,28 @@ The link to the React app:
 
 <img src='app/assets/images/table-tesla-car-booking.png' />
 
+<!-- Kanban board -->
+
+## Kanban board <a name="kanban_board"></a>
+
+Our project utilizes a Kanban board to visualize and manage tasks throughout the development process. The board is divided into several columns representing different stages of the workflow. Each task is represented by a card that can be moved between columns as it progresses.
+
+### Columns:
+
+- **To Do**: Tasks planned for the current or upcoming sprints.
+- **In Progress**: Tasks that are actively being worked on.
+- **Review**: Tasks that are completed and awaiting review.
+- **Done**: Tasks that have been completed and implemented.
+
+- [Kanban board link:](https://github.com/users/ivangonzalez224/projects/9)
+
+- Final Team Size: 5 members
+
+- The initial state of Kanban board
+  <img src='app/assets/images/286696384-4dbde003-cfed-492a-8901-dde0d69ec01a.png' />
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -94,6 +117,7 @@ Clone this repository to your desired folder:
 
 This project does not require installation. Just clone the repository to your local machine.
 Even though, for general purposes, Install this project with:
+
 ```sh
   cd my-folder
   bundle install
@@ -106,10 +130,13 @@ To run the project, do the following:
 1. Open your terminal
 2. Navigate to your folder
 3. Start the server (rails s)
+
 ```sh
    rails s
 ```
+
 4. Open your browser at your local host
+
 ```sh
    http://localhost:3000
 ```
